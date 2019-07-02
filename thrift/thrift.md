@@ -104,15 +104,32 @@ public class ThriftClient {
 
 }
 ```
-### 4:thrift 架构
 
-### 5:传输协议
+### 4:传输协议
+```
+1. TBinaryProtocal --二进制格式
+2. TCompactProtocal --压缩格式
+3. TJSONProtocal  --JSON格式
+4. TSimpleJSONProtocal  --提供JSON只写协议，生成的文件很容易通过脚本语言解析。
+5. TDebugProtocal  --使用易懂的可读的文本格式，以便于debug
+```
+### 5:服务模型
+```
+TSimpleServer  --简单的线程服务模型，常用于测试。
+TThreadPoolServer  --多线程服务模型，使用标准的阻塞式IO
+TNonblockingServer  --多线程服务模型，使用非阻塞式IO（需使用TFramedTransport数据传输方式）
+THsHaServer  --THsHa引入了线程池去处理，其模型把读写任务放到线程池去处理，Half-sync/Half-async的处理模式，Half-async是在处理IO事件上（accept/read/write io），Half-sync用于handler对rpc的同步处理
+```
+### 6:传输方式
+```
+TSocket   --阻塞式Socket
+TFramedTransport  --以Frame为单位进行传输，非阻塞式服务中使用。
+TFileTransport --以文件形式进行传输。
+TMemoryTransport  --将内存用于I/O. Java实现时内部实际使用了简单的ByteArrayOutputStream
+TZlibTransport --使用zlib进行压缩，与其他传输方式联合使用，当前无JAVA实现。
+```
 
-### 6:服务模型
-
-### 7:传输方式
-
-### 8:生产方案
+### 7:生产方案
 
 TCompactProtocol + TFramedTransport + THsHaServer 较优方案
 
