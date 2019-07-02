@@ -1,2 +1,2 @@
-# technical_investigation
-do some technical investigation &amp;Action in the project 
+# Technical_Investigation
+Do some technical investigation &amp;Action in the project 
