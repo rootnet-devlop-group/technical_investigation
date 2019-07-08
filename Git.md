@@ -37,12 +37,21 @@ git clone   *****.git //下载git仓库到本地
 **3：全局配置你的账号**
 ```
 git config --global user.name "你的用户名"
-git config --global user.email "你的邮箱"
+git config --global user.email "你的github注册的邮箱地址"
 git config --global user.password "你的密码"
 ```
 
 **4：设置SSH通道**
 很多时候，为了安全与快捷，我们会通过ssh的方式去提交代码，这时候 就需要我们设置ssh通道。
+![](https://github.com/rootnet-devlop-group/technical_investigation/blob/master/snapshot/git/ssh.jpg)
+在你的电脑上生成了ssh的公钥在上图中添加，私钥留在你的电脑里。windows生成公钥的方式如下
+```
+ssh-keygen -t rsa -C "你的github注册的邮箱地址"
+如果以前有override，如果没有直接三个回车键就可以。
+在你的C:\Users\Administrator\.ssh文件夹中就会有id_rsa.pub 和id_rsa 两个文件  
+打开pub文件 复制，添加到上图的newKey中，之后你就可以使用SSh的方式上传和拉取文件了。
+
+```
 
 
 
