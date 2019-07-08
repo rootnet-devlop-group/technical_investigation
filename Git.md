@@ -1,5 +1,4 @@
-### $\color{#4285f4}{觉得不清晰的，可以看[git教程](https://www.yiibai.com/git/git_pull.html)来学习。}$
-
+### <font size=1 font color=#FF1493 font face="黑体">觉得不清晰的，可以看[git教程](https://www.yiibai.com/git/git_pull.html)来学习。</font>
 ### Git的下载
 [Git官网](https://git-scm.com/)
 ![下载这个](https://github.com/rootnet-devlop-group/technical_investigation/blob/master/snapshot/git/Git%E4%B8%8B%E8%BD%BD.jpg)
