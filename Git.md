@@ -1,5 +1,5 @@
-$\color{#4285f4}{G}\color{#ea4335}{o}\color{#fbbc05}{o}\color{#4285f4}{g}\color{#34a853}{l}\color{#ea4335}{e}$
-觉得不清晰的，可以看[git教程](https://www.yiibai.com/git/git_pull.html)来学习。
+### $\color{#4285f4}{觉得不清晰的，可以看[git教程](https://www.yiibai.com/git/git_pull.html)来学习。}$
+
 ### Git的下载
 [Git官网](https://git-scm.com/)
 ![下载这个](https://github.com/rootnet-devlop-group/technical_investigation/blob/master/snapshot/git/Git%E4%B8%8B%E8%BD%BD.jpg)
@@ -10,12 +10,19 @@ $\color{#4285f4}{G}\color{#ea4335}{o}\color{#fbbc05}{o}\color{#4285f4}{g}\color{
 2. 在本地PC上找到你要上传Git上的项目的文件夹。
 3. 执行下面的指令
 ```
-git init    //初始化本地Git仓库
-git add *   //将要上传的文件添加到上传序列中
-git add .gitignore //为了防止你将不想提交的文件提交到Github上，比如.class文件
-git commit -m "first commit"  //注意每次提交都需要有说明，这是将要上传的文件提交到你本地仓库。
-git remote add origin https://github.com/rootnet-devlop-group/****.git //你刚才创建的仓库的地址，将本地仓库与远程仓库挂载在一起。
-git push -u origin master //将你本地仓库多次提交的内容，同步到远程Github仓库中。
+//初始化本地Git仓库
+git init    
+
+//将要上传的文件添加到上传序列中
+git add *   
+//为了防止你将不想提交的文件提交到Github上，比如.class文件
+git add .gitignore 
+//注意每次提交都需要有说明，这是将要上传的文件提交到你本地仓库。
+git commit -m "first commit"  
+//你刚才创建的仓库的地址，将本地仓库与远程仓库挂载在一起。
+git remote add origin https://github.com/rootnet-devlop-group/****.git 
+//将你本地仓库多次提交的内容，同步到远程Github仓库中。
+git push -u origin master 
 
 
 PS: 这是因为第一次建库所以相对比较繁琐。等到下次提交就是普通的add commit 和push操作了。
