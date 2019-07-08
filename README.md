@@ -1,6 +1,8 @@
 # Technical_Investigation
 Do some technical investigation &amp;Action in the project 
 
+推荐使用Markdown语法：具体文章请参照[Markdown语法](https://www.jianshu.com/p/191d1e21f7ed)
+
 ## 针对java相关中间件调研目标阶段分为五个阶段
 ```
 一阶段： 理解调研项目历史、产品产生痛点、及能够做些什么、掌握基本API调用、Demo输出。
