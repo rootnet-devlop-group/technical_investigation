@@ -14,7 +14,7 @@ git init
 
 //将要上传的文件添加到上传序列中
 git add *   
-//为了防止你将不想提交的文件提交到Github上，比如.class文件
+//为了防止你将不想提交的文件提交到Github上，比如.class文件，ignore内容在后面会写
 git add .gitignore 
 //注意每次提交都需要有说明，这是将要上传的文件提交到你本地仓库。
 git commit -m "first commit"  
@@ -23,12 +23,29 @@ git remote add origin https://github.com/rootnet-devlop-group/****.git
 //将你本地仓库多次提交的内容，同步到远程Github仓库中。
 git push -u origin master 
 
-
 PS: 这是因为第一次建库所以相对比较繁琐。等到下次提交就是普通的add commit 和push操作了。
 
-git pull //同步
+git pull //同步远程仓库内容到本地仓库
 
 ```
+**2：下载已有项目**
+```
+git clone   *****.git //下载git仓库到本地
+
+```
+
+**3：全局配置你的账号**
+```
+git config --global user.name "你的用户名"
+git config --global user.email "你的邮箱"
+git config --global user.password "你的密码"
+```
+
+**4：设置SSH通道**
+很多时候，为了安全与快捷，我们会通过ssh的方式去提交代码，这时候 就需要我们设置ssh通道。
+
+
+
 一般常用的java系 git ignore的内容如下
 ```
 # Compiled class file
@@ -55,8 +72,4 @@ git pull //同步
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 ```
-然后将整个项目push到Github上，第二种是在Github上创建一个仓库，然后将本地链接挂载到这个仓库上，然后将项目push上来。
 
->就拿当前项目为例子https://github.com/rootnet-devlop-group/technical_investigation.git
-
-git remote add origin https://github.com/rootnet-devlop-group/adsf.git
